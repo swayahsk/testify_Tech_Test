@@ -4,6 +4,7 @@ import io.cucumber.java.en.*;
 import pageObjects.LandingPage;
 import pageObjects.OfferingPage;
 import pageObjects.PageObjectManager;
+import utils.TestBase;
 import utils.TestContextSetup;
 
 import org.testng.Assert;
@@ -21,19 +22,20 @@ public class OfferPageStepDef {
 	public String offerPageProductName;
 	TestContextSetup TestContextSetup;
 	PageObjectManager pageObjectManager;
+	TestBase testBase;
 	
 	public OfferPageStepDef(TestContextSetup TestContextSetup) {
 		this.TestContextSetup=TestContextSetup;
 	}
 	
 	//handling windows (parent child)
-	@Then("user searched for {string} shortname in offers page")
+	@Then("^user searched for (.+) shortname in offers page$")
 	public void user_searched_for_same_shortname_in_offers_page_to_check_if_exist(String shortName) throws InterruptedException {
 		
-		OfferingPage offeringPage=new OfferingPage(TestContextSetup.driver);
+		//OfferingPage offeringPage=new OfferingPage(TestContextSetup.driver);
 		
 		switchToOfferPage();
-		Thread.sleep(2000);
+		OfferingPage offeringPage=TestContextSetup.pageObjectManager.getOffersPage(); // if driver is null
 		offeringPage.searchItem(shortName);
 		Thread.sleep(2000);
 		offerPageProductName = offeringPage.getProductName();
@@ -48,7 +50,7 @@ public class OfferPageStepDef {
 		//if (testContextSetup.driver.getCurrentUrl().equalsIgnoreCase("https://rahulshettyacademy.com/seleniumPractise/#/offers"));
 		
 		offeringPage.openLink(landingPageproductName); //click on link
-		TestContextSetup.genericUtils.pointerOnTheChildWindow();//change to child window 
+		TestContextSetup.genericUtils.SwitchWindowToChild();;//change to child window 
 	}
 	
 	@Then("check if the product name is the same in offer page and landling page")

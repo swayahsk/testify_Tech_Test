@@ -8,6 +8,7 @@ public class LandingPage {
 	
 	public LandingPage(WebDriver driver) {
 		this.driver=driver; //activate the driver declared with the real driver
+		System.out.println(driver);
 	}
 	
 	private By search =By.xpath("//input[@type='search']");

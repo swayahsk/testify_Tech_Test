@@ -37,7 +37,7 @@ public class LandingPageStepDef {
 	}
 	
 	
-	@When("user searched with shortname {string} and extracted actual name of product")
+	@When("^user searched with shortname (.+) and extracted actual name of product$")
 	public void user_searched_with_shortname_and_extracted_actual_name_of_product(String shortName) {
 		
 		//pageObjectManager = new PageObjectManager(TestContextSetup.driver);
@@ -45,7 +45,7 @@ public class LandingPageStepDef {
 		LandingPage landingPage=TestContextSetup.pageObjectManager.getLandingPage();
 		
 		landingPage.searchItem(shortName);
-		this.TestContextSetup.landingPageproductName = landingPage.getProductName().split("-")[0].trim();
+		TestContextSetup.landingPageproductName = landingPage.getProductName().split("-")[0].trim();
 		System.out.println(landingPageproductName + "  is extractes");
 	}
 	
