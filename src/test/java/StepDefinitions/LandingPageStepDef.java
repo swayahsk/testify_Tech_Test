@@ -7,6 +7,7 @@ import utils.TestBase;
 import utils.TestContextSetup;
 
 import org.openqa.selenium.chrome.*;
+import org.testng.Assert;
 
 import java.io.IOException;
 
@@ -20,6 +21,7 @@ public class LandingPageStepDef {
 	TestContextSetup TestContextSetup;
 	PageObjectManager pageObjectManager;
 	TestBase testBase;
+	public LandingPage landingPage;
 	
 	// Single responsibility Principle
 	// loosly coupled
@@ -27,6 +29,7 @@ public class LandingPageStepDef {
 	
 	public LandingPageStepDef(TestContextSetup TestContextSetup) {
 		this.TestContextSetup=TestContextSetup;
+		this.landingPage=TestContextSetup.pageObjectManager.getLandingPage();
 	}
 	@Given("user is on GreenCard Landing page")
 	public void user_is_on_green_card_landing_page() throws IOException {
@@ -34,6 +37,8 @@ public class LandingPageStepDef {
 //		System.setProperty("webdriver.chrome.driver", "C:/Users/skand/Downloads/chromedriver-win64/chromedriver.exe");
 //		TestContextSetup.driver = new ChromeDriver(); //driver gets the life
 //		this.TestContextSetup.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		
+		Assert.assertTrue(landingPage.getTitleLandingPage().contains("GreenKart") );
 	}
 	
 	
@@ -42,7 +47,7 @@ public class LandingPageStepDef {
 		
 		//pageObjectManager = new PageObjectManager(TestContextSetup.driver);
 		// j'ai remplacer le pageObjectManager from the PageObjectManager(file) j'ai le remplcé avec le pageObjectManager from TestContextSetup, pour evité le usage de "new"
-		LandingPage landingPage=TestContextSetup.pageObjectManager.getLandingPage();
+		
 		
 		landingPage.searchItem(shortName);
 		TestContextSetup.landingPageproductName = landingPage.getProductName().split("-")[0].trim();

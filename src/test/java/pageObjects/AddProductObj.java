@@ -16,8 +16,8 @@ public class AddProductObj {
 	private By panier = By.xpath("//img[@alt='Cart']");
 	private By productName = By.xpath("//div[@class='cart-preview active']//div//div//p[@class='product-name'][normalize-space()='Tomato - 1 Kg']");
 	private By ProceedToChekout = By.xpath("//button[normalize-space()='PROCEED TO CHECKOUT']");
-	public void addItem() {
-	    for (int i = 0; i < 3; i++) {
+	public void addItem(int howMany) {
+	    for (int i = 0; i < howMany; i++) {
 	        driver.findElement(add).click();
 	    }
 	}

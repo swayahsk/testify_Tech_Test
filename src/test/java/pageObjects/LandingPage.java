@@ -26,4 +26,8 @@ public class LandingPage {
 		
 		return driver.findElement(productName).getText();
 	}
+	public String getTitleLandingPage() {
+		
+		return driver.getTitle();
+	}
 }

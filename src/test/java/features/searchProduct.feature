@@ -17,10 +17,10 @@ Examples:
 @Function
 Scenario: Add product to the card
 When user searched with shortname <Name> and extracted actual name of product
-And user add three units 
+And user add <howMany> units 
 Then User go to the cart
 And check if the product name is added in the cart with the same <Name>
 
 Examples: 
-|Name|
-|Tom|
+|Name|howMany|
+|Tom|3|

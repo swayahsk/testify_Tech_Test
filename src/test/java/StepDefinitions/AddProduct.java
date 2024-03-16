@@ -24,6 +24,7 @@ public class AddProduct {
 	PageObjectManager pageObjectManager;
 	TestBase testBase;
 	public String addProductName;
+	public AddProductObj AddProductObj;
 	
 	
 	// Single responsibility Principle
@@ -32,19 +33,20 @@ public class AddProduct {
 	
 	public AddProduct(TestContextSetup TestContextSetup) {
 		this.TestContextSetup=TestContextSetup;
+		this.AddProductObj = TestContextSetup.pageObjectManager.getAddPageObj();
 	}
 
-	@When("user add three units")
-	public void user_add_three_units() throws InterruptedException {
+	@When("^user add (.+) units$")
+	public void user_add_three_units(int howMany) throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 
-		AddProductObj AddProductObj = TestContextSetup.pageObjectManager.getAddPageObj();
-		Thread.sleep(3000);
-		AddProductObj.addItem();
+		
+		Thread.sleep(2000);
+		AddProductObj.addItem(howMany);
 	}
 	@Then("User go to the cart")
 	public void user_go_to_the_cart() {
-		AddProductObj AddProductObj = TestContextSetup.pageObjectManager.getAddPageObj();
+		
 		AddProductObj.addToCart();
 		AddProductObj.goToCart();
 
@@ -53,7 +55,7 @@ public class AddProduct {
 	@Then("^check if the product name is added in the cart with the same (.+)$")
 	public void check_if_the_product_name_is_added_in_the_cart_with_the_same_tom(String shortName) {
 	    // Write code here that turns the phrase above into concrete actions
-		AddProductObj AddProductObj = TestContextSetup.pageObjectManager.getAddPageObj();
+		
 		addProductName = AddProductObj.getProductName().split("-")[0].trim();;
 		Assert.assertEquals(addProductName , TestContextSetup.landingPageproductName );
 		AddProductObj.proceedToCheckout();
