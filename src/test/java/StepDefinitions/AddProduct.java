@@ -8,6 +8,7 @@ import utils.TestBase;
 import utils.TestContextSetup;
 
 import org.openqa.selenium.chrome.*;
+import org.testng.Assert;
 
 import java.io.IOException;
 
@@ -22,6 +23,8 @@ public class AddProduct {
 	TestContextSetup TestContextSetup;
 	PageObjectManager pageObjectManager;
 	TestBase testBase;
+	public String addProductName;
+	
 	
 	// Single responsibility Principle
 	// loosly coupled
@@ -32,22 +35,29 @@ public class AddProduct {
 	}
 
 	@When("user add three units")
-	public void user_add_three_units() {
+	public void user_add_three_units() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 
 		AddProductObj AddProductObj = TestContextSetup.pageObjectManager.getAddPageObj();
-		
+		Thread.sleep(3000);
 		AddProductObj.addItem();
 	}
 	@Then("User go to the cart")
 	public void user_go_to_the_cart() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AddProductObj AddProductObj = TestContextSetup.pageObjectManager.getAddPageObj();
+		AddProductObj.addToCart();
+		AddProductObj.goToCart();
+
+		
 	}
-	@Then("check if the product name is added in the cart with the same Tom")
-	public void check_if_the_product_name_is_added_in_the_cart_with_the_same_tom() {
+	@Then("^check if the product name is added in the cart with the same (.+)$")
+	public void check_if_the_product_name_is_added_in_the_cart_with_the_same_tom(String shortName) {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AddProductObj AddProductObj = TestContextSetup.pageObjectManager.getAddPageObj();
+		addProductName = AddProductObj.getProductName().split("-")[0].trim();;
+		Assert.assertEquals(addProductName , TestContextSetup.landingPageproductName );
+		AddProductObj.proceedToCheckout();
+		
 	}
 
 

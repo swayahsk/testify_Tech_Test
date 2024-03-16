@@ -12,10 +12,28 @@ public class AddProductObj {
 	}
 	
 	private By add =By.xpath("//a[normalize-space()='+']");
-	//private By productName = By.xpath("//h4[normalize-space()='Tomato - 1 Kg']");
-	
+	private By cart = By.xpath("//button[normalize-space()='ADD TO CART']");
+	private By panier = By.xpath("//img[@alt='Cart']");
+	private By productName = By.xpath("//div[@class='cart-preview active']//div//div//p[@class='product-name'][normalize-space()='Tomato - 1 Kg']");
+	private By ProceedToChekout = By.xpath("//button[normalize-space()='PROCEED TO CHECKOUT']");
 	public void addItem() {
-		
-		driver.findElement(add).click();
+	    for (int i = 0; i < 3; i++) {
+	        driver.findElement(add).click();
+	    }
 	}
+	public void addToCart() {    
+	        driver.findElement(cart).click();  
+	}
+	public void goToCart() {    
+        driver.findElement(panier).click();
+    }
+	public String getProductName() {
+		
+		return driver.findElement(productName).getText();
+	}
+	public void proceedToCheckout() {
+		
+		driver.findElement(ProceedToChekout).click();	
+		}
+	
 }
