@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\skand\AppData\Local\Temp\testng-eclipse-1754150852\testng-customsuite.xml</span>
+                    <span>C:\Users\skand\AppData\Local\Temp\testng-eclipse--1564177669\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 3 failed,   4 passed</span>
+                    <span class="method-stats">8 methods, 4 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
                     <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.testNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Remplir et soumettre le formulaire avec différents jeux de données&quot;, &quot;Remplir et soumettre le formu...)">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.testNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Remplir et soumettre le formulaire avec différents jeux de données&quot;, &quot;Remplir et soumettre le formu...)">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</a> <!-- method navigator-link -->
@@ -175,9 +180,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ea4225006e314f4b82b66fe82adaf718, findElement {using=id, value=wpforms-2562-field_1-error}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.77, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: C:\Users\skand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58658/devtoo..., se:cdpVersion: 125.0.6422.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ea4225006e314f4b82b66fe82adaf718
+Command: [7a535e069c10c541701a1cb2ccd9198b, findElement {value=wpforms-2562-field_1-error, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.77, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: C:\Users\skand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51413}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51413/devtoo..., se:cdpVersion: 125.0.6422.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a535e069c10c541701a1cb2ccd9198b
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -195,7 +200,7 @@ Session ID: ea4225006e314f4b82b66fe82adaf718
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 	at pageObjects.checkOutFormPage.getEmailErrorMessage(checkOutFormPage.java:52)
-	at StepDefinitions.checkoutFormStepDef.Added_Email(checkoutFormStepDef.java:62)
+	at StepDefinitions.checkoutFormStepDef.Added_Email(checkoutFormStepDef.java:63)
 	at ✽.je remplis le champ Email avec jean.dupont(file:///C:/Users/skand/eclipse-workspace/CucumberFramework/src/test/java/features/checkoutForm.feature:8)
 
 </div> <!-- stack-trace -->
@@ -209,11 +214,51 @@ Session ID: ea4225006e314f4b82b66fe82adaf718
                   </a> <!-- runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Remplir et soumettre le formulaire avec différents jeux de données","Remplir et soumettre le formulaire de contact")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;je remplis le champ Prenom avec &apos; is undefined.
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#wpforms\-2562\-field_1\-error&quot;}
+  (Session info: chrome=125.0.6422.77)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [596bdd36153eaec5be03f2a02465ab2a, findElement {value=wpforms-2562-field_1-error, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.77, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: C:\Users\skand\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51415}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51415/devtoo..., se:cdpVersion: 125.0.6422.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 596bdd36153eaec5be03f2a02465ab2a
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pageObjects.checkOutFormPage.getEmailErrorMessage(checkOutFormPage.java:52)
+	at StepDefinitions.checkoutFormStepDef.Added_Email(checkoutFormStepDef.java:63)
+	at ✽.je remplis le champ Email avec jean.dupont(file:///C:/Users/skand/eclipse-workspace/CucumberFramework/src/test/java/features/checkoutForm.feature:8)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Remplir et soumettre le formulaire avec différents jeux de données&quot;, &quot;Remplir et soumettre le formu...)">
+                  </a> <!-- runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Remplir et soumettre le formulaire avec différents jeux de données","Remplir et soumettre le formulaire de contact")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;je remplis le champ Nom avec &apos; is undefined.
 You can implement this step using the snippet(s) below:
 
-@When(&quot;je remplis le champ Prenom avec &quot;)
-public void je_remplis_le_champ_prenom_avec() {
+@When(&quot;je remplis le champ Nom avec &quot;)
+public void je_remplis_le_champ_nom_avec() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -253,11 +298,11 @@ public void je_remplis_le_champ_prenom_avec() {
                   </a> <!-- runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Remplir et soumettre le formulaire avec différents jeux de données","Remplir et soumettre le formulaire de contact")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;je remplis le champ Nom avec &apos; is undefined.
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;je remplis le champ Prenom avec &apos; is undefined.
 You can implement this step using the snippet(s) below:
 
-@When(&quot;je remplis le champ Nom avec &quot;)
-public void je_remplis_le_champ_nom_avec() {
+@When(&quot;je remplis le champ Prenom avec &quot;)
+public void je_remplis_le_champ_prenom_avec() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -344,7 +389,7 @@ public void je_remplis_le_champ_nom_avec() {
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\skand\AppData\Local\Temp\testng-eclipse-1754150852\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\skand\AppData\Local\Temp\testng-eclipse--1564177669\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -401,40 +446,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'cucumberOptions.testNGTestRunner')
-data.setCell(0, 3, 17479);
+data.setCell(0, 3, 22963);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'cucumberOptions.testNGTestRunner')
-data.setCell(1, 3, 17404);
+data.setCell(1, 3, 21406);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'cucumberOptions.testNGTestRunner')
-data.setCell(2, 3, 16556);
+data.setCell(2, 3, 20615);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'cucumberOptions.testNGTestRunner')
-data.setCell(3, 3, 16541);
+data.setCell(3, 3, 20243);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'cucumberOptions.testNGTestRunner')
-data.setCell(4, 3, 16524);
+data.setCell(4, 3, 20043);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'runScenario')
 data.setCell(5, 2, 'cucumberOptions.testNGTestRunner')
-data.setCell(5, 3, 14631);
+data.setCell(5, 3, 19744);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'runScenario')
 data.setCell(6, 2, 'cucumberOptions.testNGTestRunner')
-data.setCell(6, 3, 11646);
+data.setCell(6, 3, 17209);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'cucumberOptions.testNGTestRunner')
+data.setCell(7, 3, 15459);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -462,46 +511,52 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">cucumberOptions.testNGTestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@228cea97)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@151ef57f)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
-                <span class="method-start">1134 ms</span>
+                <span class="method-start">1202 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
-                <span class="method-start">1135 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
-                <span class="method-start">1135 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
-                <span class="method-start">1135 ms</span>
+                <span class="method-start">1202 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
-                <span class="method-start">1135 ms</span>
+                <span class="method-start">1202 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
-                <span class="method-start">1135 ms</span>
+                <span class="method-start">1202 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
+                <span class="method-start">1202 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
-                <span class="method-start">1135 ms</span>
+                <span class="method-start">1203 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
+                <span class="method-start">1203 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Remplir et soumettre le formulaire avec différents jeux de données", "Remplir et soumettre le formu...)</span>
+                <span class="method-start">1203 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">18617 ms</span>
+                <span class="method-start">24171 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,8 +6,8 @@ Feature: Remplir et soumettre le formulaire de contact
     When je remplis le champ Nom avec <nom>
     And je remplis le champ Prenom avec <prenom>
     And je remplis le champ Email avec <email>
-    And the user selects "<source>" from the Where did you hear about us dropdown
-    And the user selects "<contact_method>" from the Je souhaite être contacté checkbox
+    And je sélectionne "<source>" dans la liste déroulante Ou avez-vous entendu parler de nous
+    And je selectionne "<contact_method>" dans la case a cocher Je souhaite etre contacte
     And je click sur le boutton submit
     Then je devrais voir un message "<expected_message>"
 

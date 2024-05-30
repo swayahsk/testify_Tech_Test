@@ -16,9 +16,10 @@ import pageObjects.ThanksPage;
 import utils.TestContextSetup;
 import org.testng.Assert;
 import java.util.regex.Pattern;
+import io.cucumber.java.AfterAll;
 
 public class checkoutFormStepDef {
-public WebDriver driver;
+public static WebDriver driver;
 public String checkoutFormStepDef;
 
 TestContextSetup testContextSetup;
@@ -64,12 +65,12 @@ public checkoutFormStepDef(TestContextSetup testContextSetup)
             "Le message de validation de l'email n'est pas affiché correctement");
     }}
 
-	@When("the user selects {string} from the Where did you hear about us dropdown")
+	@When("je sélectionne {string} dans la liste déroulante Ou avez-vous entendu parler de nous")
 	public void the_user_selects_from_the_where_did_you_hear_about_us_dropdown(String option) {
 	    // Write code here that turns the phrase above into concrete actions
 		checkOutFormPage.getDropDown(option);
 	}
-	@When("the user selects {string} from the Je souhaite être contacté checkbox")
+	@When("je selectionne {string} dans la case a cocher Je souhaite etre contacte")
 	public void the_user_selects_from_the_checkbox(String option) {
 	    // Write code here that turns the phrase above into concrete actions
 		checkOutFormPage.selectCheckboxByOption(option);
@@ -86,4 +87,16 @@ public checkoutFormStepDef(TestContextSetup testContextSetup)
 	    ThanksPage.getThanksMessage(string);
 	}
 
-}
+    @AfterAll
+    public static void tearDown() {
+        if (driver != null) {
+            Set<String> windowHandles = driver.getWindowHandles();
+            for (String handle : windowHandles) {
+                driver.switchTo().window(handle);
+                driver.close();
+            }
+        }
+    }
+        
+    }
+
