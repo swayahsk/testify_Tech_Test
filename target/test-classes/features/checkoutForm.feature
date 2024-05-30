@@ -20,3 +20,4 @@ Feature: Remplir et soumettre le formulaire de contact
       |      | Dupont | jean.dupont@example.com | Facebook | Par email           |
       | Jean |        | jean.dupont@example.com | Facebook | Par email           |
       | Jean | Dupont | jean.dupont             | Facebook | Par email           |
+      | Jean | Dupont | jean.dupont             | Facebook | Par réseaux sociaux |
