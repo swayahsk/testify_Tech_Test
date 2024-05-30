@@ -1,12 +1,8 @@
-StepDefinitions\LandingPageStepDef.class
-StepDefinitions\AddProduct.class
-pageObjects\OfferingPage.class
+cucumberOptions\testNGTestRunner.class
+pageObjects\checkOutFormPage.class
+utils\TestBase.class
 utils\TestContextSetup.class
-StepDefinitions\OfferPageStepDef.class
 pageObjects\PageObjectManager.class
 utils\GenericUtils.class
-cucumberOptions\testNGTestRunner.class
-pageObjects\LandingPage.class
-StepDefinitions\Hooks.class
-pageObjects\AddProductObj.class
-utils\TestBase.class
+cucumberOptions\FailedTestRunner.class
+StepDefinitions\checkoutFormStepDef.class

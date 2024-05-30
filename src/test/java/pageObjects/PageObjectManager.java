@@ -5,9 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 // this is the factory where we will create all the objects for all the pageobjects files
 public class PageObjectManager {
-	public LandingPage landingPage;
-	public OfferingPage OfferingPage;
-	public AddProductObj AddProductObj;
+	public checkOutFormPage checkOutFormPage;
+	public ThanksPage ThanksPage;
 	public WebDriver driver;
 	
 	public PageObjectManager(WebDriver driver){
@@ -15,19 +14,10 @@ public class PageObjectManager {
 	}
 	
 	
-	public LandingPage getLandingPage() {
-	
-		landingPage= new LandingPage(driver);
-		return landingPage;
-	}
-	
-	public OfferingPage getOffersPage() {
-		OfferingPage = new OfferingPage(driver);
-		return OfferingPage;
-	}
-	
-	public AddProductObj getAddPageObj() {
-		AddProductObj = new AddProductObj(driver);
-		return AddProductObj;
-	}
+    public checkOutFormPage getCheckOutFormPage() {
+        return (checkOutFormPage == null) ? checkOutFormPage = new checkOutFormPage(driver) : checkOutFormPage;
+    }
+    public ThanksPage getThanksPage() {
+        return (ThanksPage == null) ? ThanksPage = new ThanksPage(driver) : ThanksPage;
+    }
 } 

@@ -1,4 +1,4 @@
- package utils;
+package utils;
 
 import java.io.IOException;
 
@@ -8,7 +8,6 @@ import pageObjects.PageObjectManager;
 //This is the heart of the project, c'est ou on inject le driver vers tout les autres
 public class TestContextSetup {
 	public WebDriver driver;
-	public String landingPageproductName;
 	public PageObjectManager pageObjectManager;
 	public TestBase testBase;
 	public GenericUtils genericUtils;

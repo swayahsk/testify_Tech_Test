@@ -35,7 +35,7 @@ public class TestBase {
 		{
 			if(browser.equalsIgnoreCase("chrome"))
 			{
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/chromedriver125.exe");
 		driver = new ChromeDriver();// driver gets the life
 			}
 
